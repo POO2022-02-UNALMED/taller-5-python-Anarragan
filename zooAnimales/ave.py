@@ -12,6 +12,19 @@ class Ave(Animal):
         self._colorPlumas = colorPlumas
         Ave._listado.append(self)
 
+
+    def getcolorPlumas(self):
+        return self._colorPlumas
+
+    def setcolorPlumas(self, colorPlumas):
+        self._colorPlumas = colorPlumas
+
+    def getlistado(self):
+        return Ave._listado
+
+    def setlistado(self, listado):
+        Ave._listado = listado
+
     def movimiento(self):
         return "volar"
 
@@ -28,15 +41,3 @@ class Ave(Animal):
     def crearAguila(self, nombre, edad, genero):
         Ave.aguilas+=1
         return Ave(nombre, edad, "montanas", genero,"blanco y amarillo")
-
-    def getcolorPlumas(self):
-        return self._colorPlumas
-
-    def setcolorPlumas(self, colorPlumas):
-        self._colorPlumas = colorPlumas
-
-    def getlistado(self):
-        return Ave._listado
-
-    def setlistado(self, listado):
-        Ave._listado = listado
